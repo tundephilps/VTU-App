@@ -1,10 +1,18 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { Feather, Ionicons } from "@expo/vector-icons";
 
 const Investment = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Investment Page</Text>
+      <View style={styles.content}>
+        <Feather name="lock" size={98} color="#20409a" />
+        <Text style={styles.title}>Coming Soon</Text>
+        <Text style={styles.description}>
+          We are trying to make this feature available as soon as possible. Use
+          our available cool features for now.
+        </Text>
+      </View>
     </View>
   );
 };
@@ -12,12 +20,27 @@ const Investment = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center", // Align items to the center
-    justifyContent: "center", // Center the content vertically
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
   },
-  text: {
-    fontSize: 18,
+  content: {
+    alignItems: "center",
+    maxWidth: 300,
+  },
+  title: {
+    fontSize: 24,
     fontWeight: "bold",
+    marginTop: 20,
+    marginBottom: 10,
+    color: "#20409a",
+  },
+  description: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#666666",
+    lineHeight: 24,
   },
 });
 
